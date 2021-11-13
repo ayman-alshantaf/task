@@ -49,7 +49,7 @@ $mainWidth: 100%;
   width: 100%;
   background-color: $background-sectionImg;
 
-  h3 {
+  h1 {
     @extend %section-title;
   }
 
@@ -99,7 +99,7 @@ $mainWidth: 100%;
   min-height: 450px;
   @extend %flex;
 
-  h3 {
+  h1 {
     @extend %section-title;
   }
 
