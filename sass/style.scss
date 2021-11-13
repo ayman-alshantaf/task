@@ -1,58 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap');
+/*start variable*/
 $background-sectionImg: #83A3DB;
 $background-sectionText: #FFB7BA;
-$width-container:75%;
-$mainWidth : 100%;
-%flex{
+$mainColor: #FF8F91FF;
+$width-container: 75%;
+$mainWidth: 100%;
+
+/*start global style*/
+%flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-%section-title{
+
+%section-title {
   text-align: center;
   color: white;
   letter-spacing: 1px;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-.container{
+
+.container {
   width: $width-container;
   height: 100%;
   margin: 0 auto;
 }
-.image-line{
+
+.image-line {
   width: 100%;
   @extend %flex;
-  margin-bottom: 40px;
-  margin-top:10px ;
-  img{
+  margin-bottom: 30px;
+  margin-top: 10px;
+
+  img {
     width: 200px;
   }
 }
-.section-image{
-  padding-top:50px;
+
+/*start section-image*/
+.section-image {
+  padding-top: 50px;
   width: 100%;
   background-color: $background-sectionImg;
-  h3{
+
+  h3 {
     @extend %section-title;
   }
-  .images{
+
+  .images {
     position: relative;
     width: 100%;
     flex-wrap: wrap;
     @extend %flex;
-    .card-img{
-      width: $mainWidth / 4 - (0.5 * 4 ) ;
+
+    .card-img {
+      width: $mainWidth / 4 - (0.5 * 4 );
       margin: 0.5%;
-      img{
+
+      img {
         width: 100%;
       }
     }
-    .aliquip{
+
+    .aliquip {
       position: absolute;
       right: 3%;
       bottom: -15px;
@@ -60,42 +76,236 @@ $mainWidth : 100%;
       cursor: pointer;
     }
   }
-  .img-overlay{
+
+  .img-overlay {
     width: 100%;
     margin-top: 30px;
     position: relative;
     display: flex;
     justify-content: end;
-    img{
+
+    img {
       width: 200px;
-
     }
   }
 
 }
-//
-//.section-text{
-//  background-color: $background-sectionText;
-//  padding:50px 0;
-//  @extend %flex;
-//  h3{
-//    @extend %section-title;
-//  }
-//}
 
+/*start section-text*/
+.section-text {
+  position: relative;
+  background-color: $background-sectionText;
+  padding: 100px 0;
+  min-height: 450px;
+  @extend %flex;
 
+  h3 {
+    @extend %section-title;
+  }
+
+  .text {
+    @extend %flex;
+
+    p {
+      color: white;
+      text-align: center;
+      line-height: 2em;
+      width: 60%;
+      font-size: 18px;
+    }
+  }
+
+  img.flower-1 {
+    position: absolute;
+    width: 200px;
+    left: -1%;
+    top: -7%;
+  }
+
+  img.flower-2 {
+    position: absolute;
+    width: 370px;
+    left: 1%;
+    top: -2%;
+  }
+}
+
+/*start section-style*/
+.section-style {
+  position: relative;
+  @extend %flex;
+
+  img.flower-3 {
+    position: absolute;
+    width: 100px;
+    left: 10%;
+    bottom: 27%;
+  }
+
+  img.flower-4 {
+    position: absolute;
+    left: 11%;
+    width: 200px;
+    bottom: -8%;
+  }
+
+  .container {
+    @extend %flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 85px 0px 120px 0;
+      width: $mainWidth / 2;
+
+      h1 {
+        color: $mainColor;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+      }
+
+      p {
+        color: $mainColor;
+        font-size: 18px;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+
+      }
+
+      button {
+        padding: 13px 25px;
+        outline: none;
+        border: none;
+        color: white;
+        font-weight: bolder;
+        letter-spacing: 0.5px;
+        font-size: 15px;
+        opacity: 0.9;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .article-left {
+      border-right: 2px solid $mainColor;
+
+      button {
+        background-color: $mainColor;
+      }
+    }
+
+    .article-right {
+      button {
+        background-color: $background-sectionImg;
+      }
+    }
+  }
+
+}
+
+/*start section social-media*/
+.social-media {
+  padding: 40px;
+
+  .image-line {
+    margin-bottom: 10px;
+  }
+
+  .container {
+    @extend %flex;
+    width: 90%;
+
+    a {
+      color: $mainColor;
+      text-decoration: none;
+
+      i {
+        font-size: 70px;
+      }
+    }
+  }
+
+}
+
+/*start media query*/
 @media only screen and (max-width: 750px) {
-  .section-image{
-  .images{
-    .card-img{
-      width: $mainWidth / 2 - (0.5 * 4 ) ;
-      margin: 0.5%;
+  .section-image {
+    .images {
+      .card-img {
+        width: $mainWidth / 2 - (0.5 * 4 );
+        margin: 0.5%;
+      }
+    }
+
+    .img-overlay {
+      img {
+        display: none;
+      }
     }
   }
-   .img-overlay{
-     img{
-       display: none;
-     }
+  .section-text {
+    min-height: 400px;
+
+    .text {
+      p {
+        width: 90%;
+        font-size: 16px;
+      }
     }
-}
+
+    img.flower-1 {
+      width: 120px;
+      left: -1%;
+      top: -4%;
+    }
+
+    img.flower-2 {
+      width: 220px;
+      left: 0%;
+      top: -2%;
+    }
+  }
+  .section-style {
+    img.flower-3 {
+      position: absolute;
+      width: 70px;
+      left: 5%;
+      top: 8%;
+    }
+
+    img.flower-4 {
+      position: absolute;
+      left: 5%;
+      width: 140px;
+      top: 10%;
+
+    }
+
+    .container {
+      .article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0px 50px 0;
+        width: $mainWidth / 1;
+      }
+
+      .article-left {
+        border: none;
+        border-bottom: 2px solid $mainColor;
+      }
+
+    }
+
+  }
 }
