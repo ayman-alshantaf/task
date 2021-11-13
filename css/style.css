@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap");
+.image-line, .section-image .images {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.section-image h3 {
+  text-align: center;
+  color: white;
+  letter-spacing: 1px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
+
+.container {
+  width: 75%;
+  height: 100%;
+  margin: 0 auto; }
+
+.image-line {
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 10px; }
+  .image-line img {
+    width: 200px; }
+
+.section-image {
+  padding-top: 50px;
+  width: 100%;
+  background-color: #83A3DB; }
+  .section-image .images {
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap; }
+    .section-image .images .card-img {
+      width: 23%;
+      margin: 0.5%; }
+      .section-image .images .card-img img {
+        width: 100%; }
+    .section-image .images .aliquip {
+      position: absolute;
+      right: 3%;
+      bottom: -15px;
+      color: white;
+      cursor: pointer; }
+  .section-image .img-overlay {
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: end; }
+    .section-image .img-overlay img {
+      width: 200px; }
+
+@media only screen and (max-width: 750px) {
+  .section-image .images .card-img {
+    width: 48%;
+    margin: 0.5%; }
+  .section-image .img-overlay img {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */

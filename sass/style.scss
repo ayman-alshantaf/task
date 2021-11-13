@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap');
+$background-sectionImg: #83A3DB;
+$background-sectionText: #FFB7BA;
+$width-container:75%;
+$mainWidth : 100%;
+%flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%section-title{
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.container{
+  width: $width-container;
+  height: 100%;
+  margin: 0 auto;
+}
+.image-line{
+  width: 100%;
+  @extend %flex;
+  margin-bottom: 40px;
+  margin-top:10px ;
+  img{
+    width: 200px;
+  }
+}
+.section-image{
+  padding-top:50px;
+  width: 100%;
+  background-color: $background-sectionImg;
+  h3{
+    @extend %section-title;
+  }
+  .images{
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    @extend %flex;
+    .card-img{
+      width: $mainWidth / 4 - (0.5 * 4 ) ;
+      margin: 0.5%;
+      img{
+        width: 100%;
+      }
+    }
+    .aliquip{
+      position: absolute;
+      right: 3%;
+      bottom: -15px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .img-overlay{
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    img{
+      width: 200px;
+
+    }
+  }
+
+}
+//
+//.section-text{
+//  background-color: $background-sectionText;
+//  padding:50px 0;
+//  @extend %flex;
+//  h3{
+//    @extend %section-title;
+//  }
+//}
+
+
+@media only screen and (max-width: 750px) {
+  .section-image{
+  .images{
+    .card-img{
+      width: $mainWidth / 2 - (0.5 * 4 ) ;
+      margin: 0.5%;
+    }
+  }
+   .img-overlay{
+     img{
+       display: none;
+     }
+    }
+}
+}
